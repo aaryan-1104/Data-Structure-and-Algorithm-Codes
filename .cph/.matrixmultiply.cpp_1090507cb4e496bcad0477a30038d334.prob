@@ -1,1 +1,0 @@
-{"name":"Local: matrixmultiply","url":"f:\\Files_and_code\\Coding\\HackerRank\\matrixmultiply.cpp","tests":[{"id":1625138243121,"input":"2 3 4\n1 2 3\n4 5 6\n\n1 2 3 7\n4 5 6 8\n2 4 6 8","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Files_and_code\\Coding\\HackerRank\\matrixmultiply.cpp","group":"local","local":true}

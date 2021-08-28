@@ -1,1 +1,0 @@
-{"name":"Local: 2dArraysearch","url":"f:\\Files_and_code\\Coding\\HackerRank\\2dArraysearch.cpp","tests":[{"id":1625137519545,"input":"3 4 7\n1 2 3 5\n3 5 6 7\n5 6 7 8","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Files_and_code\\Coding\\HackerRank\\2dArraysearch.cpp","group":"local","local":true}

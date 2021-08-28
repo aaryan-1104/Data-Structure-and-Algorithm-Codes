@@ -104,6 +104,24 @@ node* reverse(node* &head){
     return head;
 }
 
+void getNode(node* &head, int pos){
+	node* temp=head;
+	int count=0;
+	if(temp==NULL){
+		return;
+	}
+	while(temp!=NULL){
+		temp=temp->next;
+		count++;
+	}
+	int x=0;
+	while(x!=count-pos-1&&head!=NULL){
+		head=head->next;
+		x++;
+	}
+	cout<<head->data;
+}
+
 int main(){
 int n;
 cin>>n;
@@ -118,8 +136,9 @@ for(int i=0;i<n;i++){
 int position;
 cin>>position;
 // deleteNode(head,position);
-reverse(head);
-display(head);
+// reverse(head);
+// display(head);
 // displayReverse(head);
+getNode(head,position);
 return 0;
 }

@@ -99,6 +99,51 @@ void display(node* &head){
 	}
 }
 
+int findMergeNode(node* &head1, node* &head2) {
+    node* temp1=head1;
+    node* temp2=head2;
+    int c1=0;
+    int c2=0;
+    while(temp1!=NULL){
+        temp1=temp1->next;
+        c1++;
+    }
+    
+	while(temp2!=NULL){
+        temp2=temp2->next;
+        c2++;
+    }
+    
+	int d;
+    node* temp11;
+    node* temp22;
+    
+	if(c1>c2){
+        d=c1-c2;
+       temp11=head1;
+       temp22=head2; 
+    }
+    else{
+        d=c2-c1;
+       temp11=head2;
+       temp22=head1;
+    }
+
+    while(d!=0){
+        temp11=temp11->next;
+        d--;
+    }
+
+    for(int i=0;i<=c1;i++){
+        if(temp11==temp22){
+            return temp11->data;
+        }
+        temp11=temp11->next;
+        temp22=temp22->next;   
+    }
+    return -1;
+}
+
 int main(){
 int n1,n2;
 int val;
@@ -123,8 +168,9 @@ for(int i=0;i<n2;i++){
 // cin>>position;
 // deleteNode(head,position);
 // reverse(head);
-node* newHead=mergeLists(head1,head2);
-display(newHead);
+// node* newHead=mergeLists(head1,head2);
+// display(newHead);
+
 // displayReverse(head);
 return 0;
 }

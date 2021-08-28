@@ -144,6 +144,21 @@ node* removeDuplicates(node* &head){
 	return head;
 }
 
+void has_cycle(node* &head){
+	node* tort=head;
+	node* rab=head;
+	bool f=false;
+	while(rab!=NULL &&  rab->next!=NULL){
+		tort=tort->next;
+		rab=rab->next->next;
+		if(tort==rab){
+			f=true;
+			break;
+		}
+	}
+	cout<<f;
+}
+
 int main(){
 int n;
 cin>>n;
@@ -155,10 +170,11 @@ for(int i=0;i<n;i++){
 	cout<<endl;
 	insertAtTail(head,val);
 }
+has_cycle(head);
 // int position;
 // cin>>position;
-node* newl=removeDuplicates(head);
-display(newl);
+// node* newl=removeDuplicates(head);
+// display(newl);
 // deleteNode(head,position);
 // reverse(head);
 // displayReverse(head);

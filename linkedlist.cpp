@@ -122,6 +122,28 @@ void getNode(node* &head, int pos){
 	cout<<head->data;
 }
 
+node* removeDuplicates(node* &head){
+	node* temp=head->next;
+	node* prev=head;
+	node* toDelete=NULL;
+	if(temp==NULL){
+        return head;
+    }
+	while(temp!=NULL){
+		if(temp->data==prev->data){
+			toDelete=temp;
+			prev->next=temp->next;
+			temp=temp->next;
+			delete toDelete;
+		}
+		else{
+			prev=temp;
+			temp=temp->next;
+		}
+	}
+	return head;
+}
+
 int main(){
 int n;
 cin>>n;
@@ -133,12 +155,13 @@ for(int i=0;i<n;i++){
 	cout<<endl;
 	insertAtTail(head,val);
 }
-int position;
-cin>>position;
+// int position;
+// cin>>position;
+node* newl=removeDuplicates(head);
+display(newl);
 // deleteNode(head,position);
 // reverse(head);
-// display(head);
 // displayReverse(head);
-getNode(head,position);
+// getNode(head,position);
 return 0;
 }

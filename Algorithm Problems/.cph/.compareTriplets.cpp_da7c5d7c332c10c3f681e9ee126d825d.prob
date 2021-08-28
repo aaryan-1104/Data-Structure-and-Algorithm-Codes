@@ -1,0 +1,1 @@
+{"name":"Local: compareTriplets","url":"f:\\Files_and_code\\Coding\\HackerRank\\Algorithm\\compareTriplets.cpp","tests":[{"id":1625912209671,"input":"17 28 30\n99 16 8","output":"2 1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Files_and_code\\Coding\\HackerRank\\Algorithm\\compareTriplets.cpp","group":"local","local":true}

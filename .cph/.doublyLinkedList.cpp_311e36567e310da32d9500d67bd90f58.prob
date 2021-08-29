@@ -1,0 +1,1 @@
+{"name":"Local: doublyLinkedList","url":"f:\\Files_and_code\\Coding\\Git\\DsaProblems\\doublyLinkedList.cpp","tests":[{"id":1630244587091,"input":"5\n1\n2\n3\n4\n5","output":"1\n2\n3\n4\n5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Files_and_code\\Coding\\Git\\DsaProblems\\doublyLinkedList.cpp","group":"local","local":true}

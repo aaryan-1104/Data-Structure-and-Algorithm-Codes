@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
-#include <string>
-void reverseString(vector<char>& s) {
+#include <vector>
+void reverse(vector<char>& s) {
         int l=s.size();
         int low=0;
         int high=l-1;
@@ -17,16 +17,15 @@ void reverseString(vector<char>& s) {
 
 int main(){
     int n;
-    vector<char> nums;
+    vector<char> s;
     cin >> n;
-    cout << endl;
-    int val;
+    char val;
     for (int i = 0; i < n; ++i)
     {
         cin>>val;
-        nums.push_back(val);
+        s.push_back(val);
         cout << endl;
     }
-    reverse(nums,target);
-    retrun 0;
+    reverse(s);
+    return 0;
 }

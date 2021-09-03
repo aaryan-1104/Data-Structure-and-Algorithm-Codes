@@ -38,6 +38,7 @@ vector<int> twoSum(vector<int>& numbers, int target){
         cout << endl;
     }
     
-
-    cout<<twoSum(nums,target);
+    vector<int> c=twoSum(nums,target);
+    cout<<c[0]<<" "<<c[1];
+    return 0;
 }

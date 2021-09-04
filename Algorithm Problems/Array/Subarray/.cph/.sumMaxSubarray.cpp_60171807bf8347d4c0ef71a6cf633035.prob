@@ -1,0 +1,1 @@
+{"name":"Local: sumMaxSubarray","url":"f:\\Files_and_code\\Coding\\C++\\array\\Subarray\\sumMaxSubarray.cpp","tests":[{"id":1625117633657,"input":"5\n-1 3 5 -6 3","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Files_and_code\\Coding\\C++\\array\\Subarray\\sumMaxSubarray.cpp","group":"local","local":true}

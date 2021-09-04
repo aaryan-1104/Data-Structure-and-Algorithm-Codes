@@ -1,0 +1,1 @@
+{"name":"Local: circularmaxsum","url":"f:\\Files_and_code\\Coding\\C++\\array\\Subarray\\circularmaxsum.cpp","tests":[{"id":1625117339880,"input":"5\n-1 2 -4 6 -3","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Files_and_code\\Coding\\C++\\array\\Subarray\\circularmaxsum.cpp","group":"local","local":true}

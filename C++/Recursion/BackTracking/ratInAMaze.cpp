@@ -29,7 +29,7 @@ bool ratInMaze(int **arr, int x, int y, int n, int **ans)//main function
         { 
             return true;
         }
-        ans[x][y] = 0; //backtracking
+        ans[x][y] = 0; //backtracking if following the current choice there is no viable choice to go ahead
         return false;
     }
     return false;

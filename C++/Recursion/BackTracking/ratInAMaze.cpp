@@ -3,7 +3,7 @@ using namespace std;
 
 bool isSafe(int **arr, int x, int y, int n)//function to check a particular location is "safe to go" or not
 {
-    if (x < n && y < n && arr[x][y] == 1)
+    if (x>=0 && x < n && y < n && y>=0 && arr[x][y] == 1)
     {
         return true;
     }
@@ -12,7 +12,7 @@ bool isSafe(int **arr, int x, int y, int n)//function to check a particular loca
 
 bool ratInMaze(int **arr, int x, int y, int n, int **ans)//main function
 {
-    if ((x == (n - 1)) && (y == (n - 1)))//base condition which denotes the end of the maze
+    if ((x == (n - 1)) && (y == (n - 1))&&arr[x][y]==1)//base condition which denotes the end of the maze
     { 
         ans[x][y]=1;
         return true;
@@ -21,11 +21,11 @@ bool ratInMaze(int **arr, int x, int y, int n, int **ans)//main function
     if (isSafe(arr, x, y, n))//to check if the cuurrent location safe or not
     { 
         ans[x][y] = 1;
-        if (arr, x + 1, y, n, ans) //to check whether the right next location is safe or not
+        if (ratInMaze(arr, x + 1, y, n, ans)) //to check whether the right next location is safe or not
         {
             return true;
         }
-        if (arr, x, y + 1, n, ans)////to check whether the bottom next location is safe or not
+        if (ratInMaze(arr, x, y + 1, n, ans))//to check whether the bottom next location is safe or not
         { 
             return true;
         }

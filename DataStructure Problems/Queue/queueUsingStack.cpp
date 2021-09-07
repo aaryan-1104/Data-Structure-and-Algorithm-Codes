@@ -32,7 +32,7 @@ public:
         cout << toDelete;
     }
 
-    int peep()
+    int peek()
     {
         if (s1.empty() && s2.empty())
         {
@@ -66,7 +66,7 @@ int main()
     q.push(1);
     q.push(2);
     q.push(3);
-    cout << q.peep();
+    cout << q.peek();
     q.pop();
     q.pop();
     cout << q.empty();

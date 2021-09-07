@@ -57,6 +57,7 @@ public:
         }
         return front->data;
     }
+
     bool empty()
     {
         if (front == NULL)
@@ -66,12 +67,14 @@ public:
         return false;
     }
 };
-int main(){
-        queue q;
-        q.push(1);
-        q.push(2);
-        q.push(3);
-        q.pop();
-        cout<<q.peek();
-        cout<<q.empty();
+
+int main()
+{
+    queue q;
+    q.push(1);
+    q.push(2);
+    q.push(3);
+    q.pop();
+    cout << q.peek();
+    cout << q.empty();
 }

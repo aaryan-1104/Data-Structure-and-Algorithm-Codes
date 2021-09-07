@@ -40,7 +40,7 @@ public:
         front++;
     }
 
-    int peep()
+    int peek()
     {
         if (front == -1 || front > back)
         {
@@ -67,6 +67,6 @@ int main()
     q.push(2);
     q.push(3);
     q.pop();
-    cout << q.peep();
+    cout << q.peek();
     cout << q.empty();
 }

@@ -20,7 +20,7 @@ public:
 int diameterOfTree(node *root, int *height)
 {
 
-    if (root == NULL)
+    if (root == NULL)           //base condition
     {
         *height = 0;
         return 0;
@@ -28,11 +28,11 @@ int diameterOfTree(node *root, int *height)
 
     int lh = 0;
     int rh = 0;
-    int ldia = diameterOfTree(root->left, &lh);
-    int rdia = diameterOfTree(root->right, &rh);
-    int currdia = rh + lh + 1;
-    *height = max(rh, lh) + 1;
-    return max(currdia, max(ldia, rdia));
+    int ldia = diameterOfTree(root->left, &lh);    //to calculate diameter(height) of left subtree
+    int rdia = diameterOfTree(root->right, &rh);   //to calculate diameter(height) of right subtree 
+    int currdia = rh + lh + 1;                     //to calculate total diameter by adding diameter of left(lh-height) and right(rh-height) subtree along with root node(1)
+    *height = max(rh, lh) + 1;                     //height of the tree
+    return max(currdia, max(ldia, rdia));          //returning maximum diameter from maximum of left or right and diamter including root
 }
 
 int main()

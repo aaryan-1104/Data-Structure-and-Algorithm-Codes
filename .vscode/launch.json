@@ -1,0 +1,77 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch arrayIsSortedOrNot",
+            "request": "launch",
+            "mainClass": "arrayIsSortedOrNot",
+            "projectName": "DsaProblems_5b21defb"
+        },
+        {
+            "type": "java",
+            "name": "Launch firstAndLastOccurence",
+            "request": "launch",
+            "mainClass": "firstAndLastOccurence",
+            "projectName": "DsaProblems_5b21defb"
+        },
+        {
+            "type": "java",
+            "name": "Launch keypad",
+            "request": "launch",
+            "mainClass": "keypad",
+            "projectName": "DsaProblems_5b21defb"
+        },
+        {
+            "type": "java",
+            "name": "Launch moveAllXToEnd",
+            "request": "launch",
+            "mainClass": "moveAllXToEnd",
+            "projectName": "DsaProblems_5b21defb"
+        },
+        {
+            "type": "java",
+            "name": "Launch removeDuplicates",
+            "request": "launch",
+            "mainClass": "removeDuplicates",
+            "projectName": "DsaProblems_5b21defb"
+        },
+        {
+            "type": "java",
+            "name": "Launch reverseAString",
+            "request": "launch",
+            "mainClass": "reverseAString",
+            "projectName": "DsaProblems_5b21defb"
+        },
+        {
+            "type": "java",
+            "name": "Launch subsequences",
+            "request": "launch",
+            "mainClass": "subsequences",
+            "projectName": "DsaProblems_5b21defb"
+        },
+        {
+            "type": "java",
+            "name": "Launch towerOfHanoi",
+            "request": "launch",
+            "mainClass": "towerOfHanoi",
+            "projectName": "DsaProblems_5b21defb"
+        },
+        {
+            "type": "java",
+            "name": "Launch uniqueSubsequence",
+            "request": "launch",
+            "mainClass": "uniqueSubsequence",
+            "projectName": "DsaProblems_5b21defb"
+        }
+    ]
+}

@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch longestSubstringWithoutRepeating_optimalSoln",
+            "request": "launch",
+            "mainClass": "longestSubstringWithoutRepeating_optimalSoln",
+            "projectName": "DsaProblems_5b21defb"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"

@@ -25,56 +25,81 @@ public:
 //     preOrder(root->left);
 //     preOrder(root->right);
 // }
-
-void printSubTreeNodesAtK(node* root, int k){
-    if(root==NULL){
+//* case 1: In this case k is reduced by 1 as it go on next level nodes in both right and left childnodes
+void printSubTreeNodesAtK(node *root, int k)
+{
+    if (root == NULL)
+    {
         return;
     }
 
-    if(k==0){
-        cout<<root->data<<" ";
+    if (k == 0)
+    {
+        cout << root->data << " ";
         return;
     }
 
-    printSubTreeNodesAtK(root->left,k-1);
-    printSubTreeNodesAtK(root->right,k-1);
-    
+    printSubTreeNodesAtK(root->left, k - 1);
+    printSubTreeNodesAtK(root->right, k - 1);
 }
-//* case 2
+// * *case2: In this case first the distance from root to the target node is calculated and then reducing that distance from total distance
+// * *and then the same process happens as in "case1"
 
-int printNodesAtK(node* root, node* target, int k){
-    if(root==NULL){
+int printNodesAtK(node *root, node *target, int k)
+{
+    if (root == NULL)
+    {
         return -1;
     }
 
-    if(root==target){
-        printSubTreeNodesAtK(root,k);
+    if (root == target)
+    {
+        printSubTreeNodesAtK(root, k);
         return 0;
     }
+    //*Apply the same for left subTree to search the target node in it.
+    int rootToTargetDistance = printNodesAtK(root->left, target, k);
 
-    int rootToTargetDistance=printNodesAtK(root->left,target,k);
-
-    if(rootToTargetDistance!=-1){
-        if(rootToTargetDistance+1==k){
-            cout<<root->data<<" ";
+    //?if it exits
+    if (rootToTargetDistance != -1)
+    {
+        // *to check if root node is at k distance from the target node and print root data if it is.
+        if (rootToTargetDistance + 1 == k)
+        {
+            cout << root->data << " ";
         }
-        else{
-            printSubTreeNodesAtK(root->right, k-rootToTargetDistance-2);
+        /**
+         * *Else go for case 1 upto k-d-2 level  
+         * todo: Where 2: 1 level for comming back to root from right + 1 level for going to left node  
+         */
+        else
+        {
+            printSubTreeNodesAtK(root->right, k - rootToTargetDistance - 2);
         }
-    return rootToTargetDistance+1;
+        return rootToTargetDistance + 1;  //* return increemented distance if it not at present level in left subtree
     }
 
-    
-    int rootToTargetDistanceRight=printNodesAtK(root->right,target,k);
+    //*Apply the same for right subTree to search the target node in it.
+    int rootToTargetDistanceRight = printNodesAtK(root->right, target, k);
 
-    if(rootToTargetDistanceRight!=-1){
-        if(rootToTargetDistance+1==k){
-            cout<<root->data<<" ";
+    //? to check the target node in right subTree if it exits or not
+    if (rootToTargetDistanceRight != -1)
+    {
+        // *to check if root node is at k distance from the target node and print root data if it is.
+        if (rootToTargetDistanceRight + 1 == k)
+        {
+            cout << root->data << " ";
         }
-        else{
-            printSubTreeNodesAtK(root->left, k-rootToTargetDistanceRight-2);
-        }
-    return rootToTargetDistanceRight+1;
+
+        /**
+         * *Else go for case 1 upto k-d-2 level  
+         * todo: Where 2: 1 level for comming back to root from right + 1 level for going to left node  
+         */
+        else
+        {
+            printSubTreeNodesAtK(root->left, k - rootToTargetDistanceRight - 2);
+        } 
+        return rootToTargetDistanceRight + 1;  //* return increemented distance if it not at present level in right subtree 
     }
 }
 
@@ -90,6 +115,12 @@ int main()
     root->right->left = new node(8);
     root->right->right = new node(9);
 
-    printNodesAtK(root,root->left,1);
-
+    printNodesAtK(root, root->left, 1);
 }
+
+/**
+ * *
+ * ?
+ * !
+ * todo
+*/

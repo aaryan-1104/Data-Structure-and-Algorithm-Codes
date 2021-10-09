@@ -29,30 +29,33 @@ void inOrder(node *root)
 }
 
 void flatten(node *root)
-{
+{   
+    //? check if root is NULL or left node and right node ids NULL
     if (root == NULL || (root->left == NULL && root->right == NULL))
     {
         return;
     }
 
+    //?if left node exist then flatten the left subtree
     if (root->left != NULL)
     {
         flatten(root->left);
 
-        node *temp = root->right;
-        root->right = root->left;
-        root->left = NULL;
+        node *temp = root->right;   //* keep the right subTree in temp variable
+        root->right = root->left;   //* make left subTree the right SubTree
+        root->left = NULL;          //* make left subTree to NULL
 
-        node *oldleft = root->right;
+        node *oldleft = root->right;//* assign nnewly made right Subtree to a variable "oldLeft"
 
+        //? Serach for the tail of "oldLeft"
         while (oldleft->right!= NULL)
         {
             oldleft = oldleft->right;
         }
-        oldleft->right = temp;
+        oldleft->right = temp;//* join the original right subTree(temp) at the tail(oldLeft->right) of the newly made right subTree
     }
 
-    flatten(root->right);
+    flatten(root->right);//* flatten the right Subtree
 }
 
 int main()

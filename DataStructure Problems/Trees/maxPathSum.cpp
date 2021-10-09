@@ -26,17 +26,26 @@ public:
 //     preOrder(root->left);
 //     preOrder(root->right);
 // }
-
+//*Stuff Function to find sum until the current node from bootom to top approach
 int maxPathSumUntil(node* root,int &ans){
     if(root==NULL){
         return 0;
     }
 
-    int left=(maxPathSumUntil(root->left,ans));
-    int right=(maxPathSumUntil(root->right,ans));
+    int left=(maxPathSumUntil(root->left,ans));     //* sum of left subTree nodes
+    int right=(maxPathSumUntil(root->right,ans));   //* sum of right subTree nodes
 
+    //?find 4 parameters and compare them for current node and compare max of 5 with the previous answer
+    /**
+     * *1.node value
+     * *2.node+left
+     * *3.node+right
+     * *4.node+right+left
+    */
     int nodemax=max(max(root->data,root->data+left+right),max(root->data+left,root->data+right));
     ans=max(ans,nodemax);
+
+    //* return max of 1, 2, 3 parameters which is to choose whether to consider right node or left node or none of them(i.e. node itself) 
     int singlePathMax=max(root->data,max(root->data+left,root->data+right));
 
     return singlePathMax;

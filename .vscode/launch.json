@@ -5,17 +5,30 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "g++.exe - Build and debug active file",
+            "type": "java",
+            "name": "Launch firstAndLastOccurence",
+            "request": "launch",
+            "mainClass": "firstAndLastOccurence",
+            "projectName": "DsaCodeChallenges_8e906d84"
+        },
+        {
+            "type": "java",
+            "name": "Launch arrayIsSortedOrNot",
+            "request": "launch",
+            "mainClass": "arrayIsSortedOrNot",
+            "projectName": "DsaCodeChallenges_8e906d84"
+        },
+        {
+            "name": "g++ - Build and debug active file",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
             "args": [],
             "stopAtEntry": true,
             "cwd": "${fileDirname}",
             "environment": [],
             "externalConsole": true,
             "MIMode": "gdb",
-            "miDebuggerPath": "C:\\MinGW\\bin\\gdb.exe",
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",
@@ -23,7 +36,8 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "C/C++: g++.exe build active file"
+            "preLaunchTask": "C/C++: g++ build active file",
+            "miDebuggerPath": "/usr/bin/gdb"
         },
         {
             "type": "java",
@@ -43,7 +57,7 @@
             "name": "Launch arrayIsSortedOrNot",
             "request": "launch",
             "mainClass": "arrayIsSortedOrNot",
-            "projectName": "DsaProblems_5b21defb"
+            "projectName": "DsaProblems"
         },
         {
             "type": "java",
